@@ -16,7 +16,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="GitVersionTask" Version="4.0.0-*" PrivateAssets="All" />
-    <PackageReference Include="NServiceBus" Version="[6.*, 7)" />
+    <PackageReference Include="NServiceBus" Version="6.4.3" />
   </ItemGroup>
   <Target Name="IncludePDBsInPackage">
     <ItemGroup>

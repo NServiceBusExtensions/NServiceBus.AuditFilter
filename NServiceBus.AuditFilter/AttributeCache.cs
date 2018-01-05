@@ -21,12 +21,20 @@ static class AttributeCache
 
     static bool? InnerTryGetIncludeInAudit(Type type)
     {
-        if (type.GetAttribute<IncludeInAuditAttribute>() != null)
+        var includeInAuditAttribute = type.GetAttribute<IncludeInAuditAttribute>();
+        var excludeFromAuditAttribute = type.GetAttribute<ExcludeFromAuditAttribute>();
+
+        if (includeInAuditAttribute != null && excludeFromAuditAttribute != null)
+        {
+            throw new Exception($"The message '{type.FullName}' contains both {nameof(IncludeInAuditAttribute)} and {nameof(ExcludeFromAuditAttribute)}.");
+        }
+
+        if (includeInAuditAttribute != null)
         {
             return true;
         }
 
-        if (type.GetAttribute<ExcludeFromAuditAttribute>() != null)
+        if (excludeFromAuditAttribute != null)
         {
             return false;
         }
