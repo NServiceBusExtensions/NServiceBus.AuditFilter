@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFrameworks>net47</TargetFrameworks>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\SampleNsb6\AuditThisMessage.cs" Link="AuditThisMessage.cs" />
+    <Compile Include="..\SampleNsb6\DoNotAuditThisMessage.cs" Link="DoNotAuditThisMessage.cs" />
+    <Compile Include="..\SampleNsb6\MyHandler.cs" Link="MyHandler.cs" />
+    <Compile Include="..\SampleNsb6\Program.cs" Link="Program.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NServiceBus.AuditFilter\NServiceBus.AuditFilter.csproj" />
+  </ItemGroup>
+</Project>
