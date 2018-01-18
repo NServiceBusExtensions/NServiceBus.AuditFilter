@@ -1,7 +1,7 @@
-﻿namespace NServiceBus.AuditFilter
-{
-    using System;
+﻿using System;
 
+namespace NServiceBus.AuditFilter
+{
     [AttributeUsage(AttributeTargets.Class)]
     public class ExcludeFromAuditAttribute : Attribute
     {
