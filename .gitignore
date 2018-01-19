@@ -13,6 +13,7 @@
 *.ncrunchsolution
 *.ncrunchproject
 *.DotSettings
+.learningtransport
 
 # Build results
 [Dd]ebug/
