@@ -11,6 +11,7 @@ class AuditRulesBehavior : Behavior<IIncomingLogicalMessageContext>
     {
         this.filter = filter;
     }
+
     public override Task Invoke(IIncomingLogicalMessageContext context, Func<Task> next)
     {
         var instance = context.Message.Instance;
@@ -25,12 +26,17 @@ class AuditRulesBehavior : Behavior<IIncomingLogicalMessageContext>
 
     bool ShouldIncludeInAudit(IIncomingLogicalMessageContext context)
     {
-        if (AttributeCache.TryGetIncludeInAudit(context.Message.Instance.GetType(), out var includeInAudit))
+        var messageType = context.Message.Instance.GetType();
+        if (AttributeCache.TryGetIncludeInAudit(messageType, out var includeInAudit))
         {
             return includeInAudit;
         }
 
-        filter(context.Message.Instance, context.MessageHeaders, out includeInAudit);
-        return includeInAudit;
+        var filterResult = filter(context.Message.Instance, context.MessageHeaders);
+        if (filterResult == FilterResult.IncludeInAudit)
+        {
+            return true;
+        }
+        return false;
     }
 }

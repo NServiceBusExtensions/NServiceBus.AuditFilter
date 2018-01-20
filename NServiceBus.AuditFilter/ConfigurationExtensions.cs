@@ -10,21 +10,25 @@ namespace NServiceBus
     {
         public static void UseAuditAttributeFilter(this EndpointConfiguration endpointConfiguration, bool defaultIncludeInAudit = true)
         {
-            void Filter(object instance, IReadOnlyDictionary<string, string> headers, out bool includeInAudit)
+            FilterResult Filter(object instance, IReadOnlyDictionary<string, string> headers)
             {
-                includeInAudit = defaultIncludeInAudit;
+                if (defaultIncludeInAudit)
+                {
+                    return FilterResult.IncludeInAudit;
+                }
+                return FilterResult.ExcludeFromAudit;
             }
 
             UseAuditAttributeFilter(endpointConfiguration, Filter);
         }
 
-        public static void UseAuditAttributeFilter(EndpointConfiguration endpointConfiguration, Filter filter = null)
+        public static void UseAuditAttributeFilter(this EndpointConfiguration endpointConfiguration, Filter filter = null)
         {
             Guard.AgainstNull(endpointConfiguration, nameof(endpointConfiguration));
 
             if (filter == null)
             {
-                filter = (object instance, IReadOnlyDictionary<string, string> headers, out bool includeInAudit) => { includeInAudit = true; };
+                filter = (instance, headers) => FilterResult.IncludeInAudit;
             }
 
             var pipeline = endpointConfiguration.Pipeline;

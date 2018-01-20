@@ -2,7 +2,7 @@
 using NServiceBus.AuditFilter;
 
 [ExcludeFromAudit]
-public class DoNotAuditThisMessage : IMessage
+public class MessageWithExcludeFromAudit : IMessage
 {
     public string Content { get; set; }
 }

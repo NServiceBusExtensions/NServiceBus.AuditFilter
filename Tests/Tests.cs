@@ -1,27 +1,86 @@
-﻿using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using NServiceBus;
+using NServiceBus.AuditFilter;
 using Xunit;
 
 public class Tests
 {
     [Fact]
-    public async Task Foo()
+    public async Task Skip_with_attribute_and_default_to_include()
     {
-        var auditQueuePath = Path.GetFullPath("../../../../.learningtransport/audit");
-        var configuration = new EndpointConfiguration("AuditFilterSample");
-        configuration.UsePersistence<InMemoryPersistence>();
-        configuration.UseTransport<LearningTransport>();
-        configuration.AuditProcessedMessagesTo("audit");
-        configuration.UseAuditAttributeFilter();
-
-        var endpoint = await Endpoint.Start(configuration);
-
-        await endpoint.SendLocal(new AuditThisMessage());
-
-        await endpoint.SendLocal(new DoNotAuditThisMessage());
-
-        await endpoint.Stop();
+        var message = new MessageWithExcludeFromAudit();
+        var result = await Send(message, _ => _.UseAuditAttributeFilter(defaultIncludeInAudit: true));
+        Assert.Empty(result);
+    }
+    [Fact]
+    public async Task Skip_with_attribute_and_default_to_exclude()
+    {
+        var message = new MessageWithExcludeFromAudit();
+        var result = await Send(message, _ => _.UseAuditAttributeFilter(defaultIncludeInAudit: false));
+        Assert.Empty(result);
     }
 
+    [Fact]
+    public async Task Audit_with_attribute_and_default_to_include()
+    {
+        var message = new MessageWithIncludeInAudit();
+        var result = await Send(message, _ => _.UseAuditAttributeFilter(defaultIncludeInAudit: true));
+        Assert.True(result.Count == 1);
+    }
+
+    [Fact]
+    public async Task Audit_with_attribute_and_default_to_exclude()
+    {
+        var message = new MessageWithIncludeInAudit();
+        var result = await Send(message, _ => _.UseAuditAttributeFilter(defaultIncludeInAudit: false));
+        Assert.True(result.Count == 1);
+    }
+    [Fact]
+    public async Task Simple_message_and_default_to_include()
+    {
+        var message = new SimpleMessage();
+        var result = await Send(message, _ => _.UseAuditAttributeFilter(defaultIncludeInAudit: true));
+        Assert.True(result.Count == 1);
+    }
+
+    [Fact]
+    public async Task Simple_message_and_default_to_exclude()
+    {
+        var message = new SimpleMessage();
+        var result = await Send(message, _ => _.UseAuditAttributeFilter(defaultIncludeInAudit: false));
+        Assert.True(result.Count == 0);
+    }
+    [Fact]
+    public async Task Simple_message_and_delegate_to_include()
+    {
+        var message = new SimpleMessage();
+        var result = await Send(message, _ => _.UseAuditAttributeFilter(
+            (instance, headers) => FilterResult.IncludeInAudit));
+        Assert.True(result.Count == 1);
+    }
+
+    [Fact]
+    public async Task Simple_message_and_delegate_to_exclude()
+    {
+        var message = new SimpleMessage();
+        var result = await Send(message, _ => _.UseAuditAttributeFilter(
+            (instance, headers) => FilterResult.ExcludeFromAudit));
+        Assert.True(result.Count == 0);
+    }
+
+    static async Task<List<AuditedMessageData>> Send(object message, Action<EndpointConfiguration> addAuditFilter, [CallerMemberName] string key = null)
+    {
+        var testingTransport = new TestingTransport(key);
+        var configuration = new EndpointConfiguration("AuditFilterSample");
+        configuration.UsePersistence<LearningPersistence>();
+        testingTransport.ApplyToEndpoint(configuration);
+        addAuditFilter(configuration);
+
+        var endpoint = await Endpoint.Start(configuration);
+        await endpoint.SendLocal(message);
+        return await testingTransport.GetProcessedMessages(endpoint);
+    }
 }

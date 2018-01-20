@@ -7,10 +7,10 @@ class Program
     static async Task Main()
     {
         var configuration = new EndpointConfiguration("AuditFilterSample");
-        configuration.UsePersistence<InMemoryPersistence>();
+        configuration.UsePersistence<LearningPersistence>();
         configuration.UseTransport<LearningTransport>();
         configuration.AuditProcessedMessagesTo("audit");
-        configuration.UseAuditAttributeFilter();
+      //  configuration.UseAuditAttributeFilter();
 
         var endpoint = await Endpoint.Start(configuration);
 
