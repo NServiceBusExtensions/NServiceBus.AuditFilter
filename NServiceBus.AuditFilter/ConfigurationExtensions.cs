@@ -8,7 +8,7 @@ namespace NServiceBus
     /// </summary>
     public static class AuditFilterConfigurationExtensions
     {
-        public static void UseAuditAttributeFilter(this EndpointConfiguration endpointConfiguration, bool defaultIncludeInAudit = true)
+        public static void FilterAuditByAttribute(this EndpointConfiguration endpointConfiguration, bool defaultIncludeInAudit = true)
         {
             FilterResult Filter(object instance, IReadOnlyDictionary<string, string> headers)
             {
@@ -19,10 +19,10 @@ namespace NServiceBus
                 return FilterResult.ExcludeFromAudit;
             }
 
-            UseAuditAttributeFilter(endpointConfiguration, Filter);
+            FilterAuditByDelegate(endpointConfiguration, Filter);
         }
 
-        public static void UseAuditAttributeFilter(this EndpointConfiguration endpointConfiguration, Filter filter = null)
+        public static void FilterAuditByDelegate(this EndpointConfiguration endpointConfiguration, Filter filter = null)
         {
             Guard.AgainstNull(endpointConfiguration, nameof(endpointConfiguration));
 

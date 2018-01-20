@@ -10,7 +10,7 @@ class Program
         configuration.UsePersistence<LearningPersistence>();
         configuration.UseTransport<LearningTransport>();
         configuration.AuditProcessedMessagesTo("audit");
-      //  configuration.UseAuditAttributeFilter();
+      //  configuration.FilterAuditByDelegate();
 
         var endpoint = await Endpoint.Start(configuration);
 
