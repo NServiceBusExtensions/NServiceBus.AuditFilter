@@ -12,14 +12,14 @@ public class Tests
     public async Task Skip_with_attribute_and_default_to_include()
     {
         var message = new MessageWithExcludeFromAudit();
-        var result = await Send(message, _ => _.FilterAuditQueue(defaultIncludeInAudit: true));
+        var result = await Send(message, _ => _.FilterAuditQueue(FilterResult.IncludeInAudit));
         Assert.Empty(result);
     }
     [Fact]
     public async Task Skip_with_attribute_and_default_to_exclude()
     {
         var message = new MessageWithExcludeFromAudit();
-        var result = await Send(message, _ => _.FilterAuditQueue(defaultIncludeInAudit: false));
+        var result = await Send(message, _ => _.FilterAuditQueue(FilterResult.ExcludeFromAudit));
         Assert.Empty(result);
     }
 
@@ -27,7 +27,7 @@ public class Tests
     public async Task Audit_with_attribute_and_default_to_include()
     {
         var message = new MessageWithIncludeInAudit();
-        var result = await Send(message, _ => _.FilterAuditQueue(defaultIncludeInAudit: true));
+        var result = await Send(message, _ => _.FilterAuditQueue(FilterResult.IncludeInAudit));
         Assert.True(result.Count == 1);
     }
 
@@ -35,14 +35,14 @@ public class Tests
     public async Task Audit_with_attribute_and_default_to_exclude()
     {
         var message = new MessageWithIncludeInAudit();
-        var result = await Send(message, _ => _.FilterAuditQueue(defaultIncludeInAudit: false));
+        var result = await Send(message, _ => _.FilterAuditQueue(FilterResult.ExcludeFromAudit));
         Assert.True(result.Count == 1);
     }
     [Fact]
     public async Task Simple_message_and_default_to_include()
     {
         var message = new SimpleMessage();
-        var result = await Send(message, _ => _.FilterAuditQueue(defaultIncludeInAudit: true));
+        var result = await Send(message, _ => _.FilterAuditQueue(FilterResult.IncludeInAudit));
         Assert.True(result.Count == 1);
     }
 
@@ -50,7 +50,7 @@ public class Tests
     public async Task Simple_message_and_default_to_exclude()
     {
         var message = new SimpleMessage();
-        var result = await Send(message, _ => _.FilterAuditQueue(defaultIncludeInAudit: false));
+        var result = await Send(message, _ => _.FilterAuditQueue(FilterResult.ExcludeFromAudit));
         Assert.True(result.Count == 0);
     }
     [Fact]

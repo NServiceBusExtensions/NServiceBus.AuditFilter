@@ -8,16 +8,13 @@ namespace NServiceBus
     /// </summary>
     public static class AuditFilterConfigurationExtensions
     {
-        public static void FilterAuditQueue(this EndpointConfiguration endpointConfiguration, bool defaultIncludeInAudit)
+        public static void FilterAuditQueue(this EndpointConfiguration endpointConfiguration, FilterResult defaultFilter)
         {
             Guard.AgainstNull(endpointConfiguration, nameof(endpointConfiguration));
+
             FilterResult Filter(object instance, IReadOnlyDictionary<string, string> headers)
             {
-                if (defaultIncludeInAudit)
-                {
-                    return FilterResult.IncludeInAudit;
-                }
-                return FilterResult.ExcludeFromAudit;
+                return defaultFilter;
             }
 
             InnerFilter(endpointConfiguration, Filter);
