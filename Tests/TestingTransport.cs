@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Runtime.Serialization.Json;
-using System.Text;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using NServiceBus;
