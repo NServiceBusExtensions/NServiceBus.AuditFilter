@@ -1,4 +1,4 @@
-![Icon](https://raw.githubusercontent.com/SimonCropp/NServiceBus.AuditFilter/master/package_icon.png)
+![Icon](https://raw.githubusercontent.com/NServiceBusExtensions/NServiceBus.AuditFilter/master/icon.png)
 
 NServiceBus.AuditFilter
 ===========================
