@@ -9,7 +9,7 @@
     <Copyright>Copyright $([System.DateTime]::UtcNow.ToString(yyyy)) Simon Cropp, Indu Alagarsamy. All rights reserved</Copyright>
     <PackageTags>NServiceBus, Audit, Filter</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/NServiceBusExtensions/NServiceBus.AuditFilter/master/icon.png</PackageIconUrl>
-    <PackageProjectUrl>https://docs.particular.net/nuget/$(PackageId)</PackageProjectUrl>
+    <PackageProjectUrl>https://docs.particular.net/nuget/NServiceBus.AuditFilter</PackageProjectUrl>
     <PackageOutputPath>..\nugets</PackageOutputPath>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <LangVersion>latest</LangVersion>
