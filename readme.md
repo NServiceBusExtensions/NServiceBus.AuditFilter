@@ -1,4 +1,4 @@
-![Icon](https://raw.githubusercontent.com/SimonCropp/NServiceBus.AuditFilter/master/package_icon.png)
+![Icon](https://raw.githubusercontent.com/NServiceBusExtensions/NServiceBus.AuditFilter/master/icon.png)
 
 NServiceBus.AuditFilter
 ===========================
@@ -6,7 +6,7 @@ NServiceBus.AuditFilter
 Add message auditing filtering functionality to [NServiceBus](https://docs.particular.net/nservicebus/).
 
 
-## The nuget package  [![NuGet Status](http://img.shields.io/nuget/v/NServiceBus.AuditFilter.svg?style=flat)](https://www.nuget.org/packages/NServiceBus.AuditFilter/)
+## The nuget package [![NuGet Status](http://img.shields.io/nuget/v/NServiceBus.AuditFilter.svg?style=flat)](https://www.nuget.org/packages/NServiceBus.AuditFilter/)
 
 https://nuget.org/packages/NServiceBus.AuditFilter/
 
@@ -15,7 +15,8 @@ https://nuget.org/packages/NServiceBus.AuditFilter/
 
 ## Documentation
 
-https://docs.particular.net/nservicebus/audit-filter/
+https://docs.particular.net/nuget/NServiceBus.AuditFilter
+
 
 ## Icon
 
