@@ -1,9 +1,4 @@
-![Icon](https://raw.githubusercontent.com/NServiceBusExtensions/NServiceBus.AuditFilter/master/icon.png)
-
-NServiceBus.AuditFilter
-===========================
-
-Add message auditing filtering functionality to [NServiceBus](https://docs.particular.net/nservicebus/).
+<img src="https://raw.github.com/NServiceBusExtensions/NServiceBus.AuditFilter/master/src/icon.png" height="25px"> Add message auditing filtering functionality to [NServiceBus](https://docs.particular.net/nservicebus/).
 
 <!--- StartOpenCollectiveBackers -->
 
