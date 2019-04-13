@@ -5,8 +5,10 @@ using System.Threading.Tasks;
 using NServiceBus;
 using NServiceBus.AuditFilter;
 using Xunit;
+using Xunit.Abstractions;
 
-public class Tests
+public class Tests :
+    XunitLoggingBase
 {
     [Fact]
     public async Task Skip_with_attribute_and_default_to_include()
@@ -15,6 +17,7 @@ public class Tests
         var result = await Send(message, _ => _.FilterAuditQueue(FilterResult.IncludeInAudit));
         Assert.Empty(result);
     }
+
     [Fact]
     public async Task Skip_with_attribute_and_default_to_exclude()
     {
@@ -38,6 +41,7 @@ public class Tests
         var result = await Send(message, _ => _.FilterAuditQueue(FilterResult.ExcludeFromAudit));
         Assert.True(result.Count == 1);
     }
+
     [Fact]
     public async Task Simple_message_and_default_to_include()
     {
@@ -53,6 +57,7 @@ public class Tests
         var result = await Send(message, _ => _.FilterAuditQueue(FilterResult.ExcludeFromAudit));
         Assert.True(result.Count == 0);
     }
+
     [Fact]
     public async Task Simple_message_and_delegate_to_include()
     {
@@ -82,5 +87,9 @@ public class Tests
         var endpoint = await Endpoint.Start(configuration);
         await endpoint.SendLocal(message);
         return await testingTransport.GetProcessedMessages(endpoint);
+    }
+
+    public Tests(ITestOutputHelper output) : base(output)
+    {
     }
 }
