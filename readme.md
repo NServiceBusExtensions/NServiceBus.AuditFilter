@@ -29,8 +29,6 @@ Thanks to all the backing developers! Support this project by [becoming a patron
 
 https://nuget.org/packages/NServiceBus.AuditFilter/
 
-    PM> Install-Package NServiceBus.AuditFilter
-
 
 ## Documentation
 
