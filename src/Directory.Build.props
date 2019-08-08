@@ -2,20 +2,8 @@
 <Project>
   <PropertyGroup>
     <Version>2.0.1</Version>
-    <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
-    <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <Copyright>Copyright $([System.DateTime]::UtcNow.ToString(yyyy)). All rights reserved</Copyright>
     <PackageTags>NServiceBus, Audit, Filter</PackageTags>
-    <PackageIconUrl>https://raw.githubusercontent.com/NServiceBusExtensions/NServiceBus.AuditFilter/master/src/icon.png</PackageIconUrl>
     <PackageProjectUrl>https://docs.particular.net/nuget/NServiceBus.AuditFilter</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/NServiceBusExtensions/NServiceBus.AuditFilter</RepositoryUrl>
-    <PackageOutputPath>..\..\nugets</PackageOutputPath>
-    <LangVersion>latest</LangVersion>
     <NoWarn>CS1591</NoWarn>
-    <AssemblyOriginatorKeyFile>$(SolutionDir)key.snk</AssemblyOriginatorKeyFile>
-    <SignAssembly>true</SignAssembly>
-    <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <DebugType>embedded</DebugType>
-    <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
 </Project>
