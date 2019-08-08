@@ -1,4 +1,4 @@
-<img src="https://raw.github.com/NServiceBusExtensions/NServiceBus.AuditFilter/master/src/icon.png" height="25px"> Add message auditing filtering functionality to [NServiceBus](https://docs.particular.net/nservicebus/).
+<img src="/src/icon.png" height="25px"> Add message auditing filtering functionality to [NServiceBus](https://docs.particular.net/nservicebus/).
 
 <!--- StartOpenCollectiveBackers -->
 
@@ -25,9 +25,9 @@ Thanks to all the backing developers! Support this project by [becoming a patron
 
 <a href="#" id="endofbacking"></a>
 
-## The nuget package [![NuGet Status](http://img.shields.io/nuget/v/NServiceBus.AuditFilter.svg)](https://www.nuget.org/packages/NServiceBus.AuditFilter/)
+## NuGet package
 
-https://nuget.org/packages/NServiceBus.AuditFilter/
+https://nuget.org/packages/NServiceBus.AuditFilter/ [![NuGet Status](http://img.shields.io/nuget/v/NServiceBus.AuditFilter.svg)](https://www.nuget.org/packages/NServiceBus.AuditFilter/)
 
 
 ## Documentation
@@ -37,4 +37,4 @@ https://docs.particular.net/nuget/NServiceBus.AuditFilter
 
 ## Icon
 
-<a href="http://thenounproject.com/term/audit/618766/" target="_blank">Audit</a> designed by Delwar Hossain from <a href="http://thenounproject.com/" target="_blank">The Noun Project</a>
+[Audit](https://thenounproject.com/term/audit/618766/) designed by [Delwar Hossain](https://thenounproject.com/delwar/) from [The Noun Project](https://thenounproject.com/).
