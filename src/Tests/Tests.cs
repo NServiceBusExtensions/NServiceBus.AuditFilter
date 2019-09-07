@@ -8,7 +8,7 @@ using Xunit;
 using Xunit.Abstractions;
 
 public class Tests :
-    XunitLoggingBase
+    XunitApprovalBase
 {
     [Fact]
     public async Task Skip_with_attribute_and_default_to_include()
