@@ -2,7 +2,8 @@
 using NServiceBus.AuditFilter;
 
 [IncludeInAudit]
-public class AuditThisMessage : IMessage
+public class AuditThisMessage :
+    IMessage
 {
-    public string Content { get; set; }
+    public string? Content { get; set; }
 }

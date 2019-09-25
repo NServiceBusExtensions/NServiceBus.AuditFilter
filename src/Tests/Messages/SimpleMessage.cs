@@ -1,6 +1,7 @@
 ﻿using NServiceBus;
 
-public class SimpleMessage : IMessage
+public class SimpleMessage :
+    IMessage
 {
-    public string Content { get; set; }
+    public string? Content { get; set; }
 }

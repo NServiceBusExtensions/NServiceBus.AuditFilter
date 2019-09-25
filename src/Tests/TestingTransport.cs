@@ -13,7 +13,7 @@ public class TestingTransport
     string auditPath;
     int endpointInstanceCount;
 
-    public TestingTransport([CallerMemberName] string key = null)
+    public TestingTransport([CallerMemberName] string key = null!)
     {
         fullPath = Path.GetFullPath(key);
         auditPath = Path.Combine(fullPath, "audit");
@@ -69,14 +69,14 @@ public class TestingTransport
         {
             var metadata = DeserializeMetadata(metadataFile);
             yield return new AuditedMessageData
-            {
-                MessageId = Guid.Parse(metadata[Headers.MessageId]),
-                ProcessingEndpoint = metadata[Headers.ProcessingEndpoint],
-                OriginatingEndpoint = metadata[Headers.OriginatingEndpoint],
-                MessageType = GetMessageType(metadata),
-                Metadata = metadata,
-                Body = GetBody(metadataFile)
-            };
+            (
+                messageId: Guid.Parse(metadata[Headers.MessageId]),
+                processingEndpoint: metadata[Headers.ProcessingEndpoint],
+                originatingEndpoint: metadata[Headers.OriginatingEndpoint],
+                messageType: GetMessageType(metadata),
+                metadata: metadata,
+                body: GetBody(metadataFile)
+            );
         }
     }
 
@@ -87,11 +87,11 @@ public class TestingTransport
         return File.ReadAllText(bodyPath);
     }
 
-    static Type GetMessageType(Dictionary<string, string> metadata)
+    static Type? GetMessageType(Dictionary<string, string> metadata)
     {
         if (metadata.TryGetValue(Headers.EnclosedMessageTypes, out var messageTypeName))
         {
-            return Type.GetType(messageTypeName);
+            return Type.GetType(messageTypeName, true);
         }
 
         return null;

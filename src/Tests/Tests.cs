@@ -76,7 +76,7 @@ public class Tests :
         Assert.True(result.Count == 0);
     }
 
-    static async Task<List<AuditedMessageData>> Send(object message, Action<EndpointConfiguration> addAuditFilter, [CallerMemberName] string key = null)
+    static async Task<List<AuditedMessageData>> Send(object message, Action<EndpointConfiguration> addAuditFilter, [CallerMemberName] string key = null!)
     {
         var testingTransport = new TestingTransport(key);
         var configuration = new EndpointConfiguration("AuditFilterSample");
