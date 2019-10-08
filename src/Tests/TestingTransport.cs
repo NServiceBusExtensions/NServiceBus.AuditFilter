@@ -13,7 +13,7 @@ public class TestingTransport
     string auditPath;
     int endpointInstanceCount;
 
-    public TestingTransport([CallerMemberName] string key = null!)
+    public TestingTransport([CallerMemberName] string key = "")
     {
         fullPath = Path.GetFullPath(key);
         auditPath = Path.Combine(fullPath, "audit");
