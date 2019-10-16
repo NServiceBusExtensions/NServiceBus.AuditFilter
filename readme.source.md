@@ -29,6 +29,8 @@ Thanks to all the backing developers! Support this project by [becoming a patron
 
 https://nuget.org/packages/NServiceBus.AuditFilter/ [![NuGet Status](https://img.shields.io/nuget/v/NServiceBus.AuditFilter.svg)](https://www.nuget.org/packages/NServiceBus.AuditFilter/)
 
+toc
+
 
 ## Usage
 
@@ -60,8 +62,8 @@ snippet: FilterAuditByDelegate
 
 ## Include/Exclude logic flow
 
+<img src="/flow.png" width="200px">
 
-![flow](flow.png)
 
 <!--
 ```mermaid

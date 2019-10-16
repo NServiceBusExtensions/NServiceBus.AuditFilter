@@ -36,6 +36,20 @@ Thanks to all the backing developers! Support this project by [becoming a patron
 
 https://nuget.org/packages/NServiceBus.AuditFilter/ [![NuGet Status](https://img.shields.io/nuget/v/NServiceBus.AuditFilter.svg)](https://www.nuget.org/packages/NServiceBus.AuditFilter/)
 
+<!-- toc -->
+## Contents
+
+  * [Usage](#usage)
+    * [Decorate messages with attributes](#decorate-messages-with-attributes)
+    * [Add to EndpointConfiguration](#add-to-endpointconfiguration)
+    * [Delegate filter fallback](#delegate-filter-fallback)
+  * [Include/Exclude logic flow](#includeexclude-logic-flow)
+  * [Sample](#sample)
+    * [Decorate messages with attributes](#decorate-messages-with-attributes-1)
+    * [Add to EndpointConfiguration](#add-to-endpointconfiguration-1)
+<!-- endtoc -->
+
+
 
 ## Usage
 
@@ -132,8 +146,8 @@ endpointConfiguration.FilterAuditQueue(
 
 ## Include/Exclude logic flow
 
+<img src="/flow.png" width="200px">
 
-![flow](flow.png)
 
 <!--
 ```mermaid
