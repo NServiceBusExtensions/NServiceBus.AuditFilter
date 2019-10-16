@@ -1,25 +1,59 @@
-﻿using System;
+using System;
+using System.IO;
 using System.Threading.Tasks;
 using NServiceBus;
+using NServiceBus.AuditFilter;
 
 class Program
 {
+    public static string AuditPath = Path.GetFullPath("../.learningtransport/audit");
+
     static async Task Main()
     {
-        var configuration = new EndpointConfiguration("AuditFilterSample");
-        configuration.UsePersistence<LearningPersistence>();
-        configuration.UseTransport<LearningTransport>();
-        configuration.AuditProcessedMessagesTo("audit");
-      //  configuration.FilterAuditByDelegate();
+        Console.Title = "Samples.AuditFilter";
+        var endpointConfiguration = new EndpointConfiguration("Samples.AuditFilter");
 
-        var endpoint = await Endpoint.Start(configuration);
+        endpointConfiguration.UsePersistence<LearningPersistence>();
+        endpointConfiguration.UseTransport<LearningTransport>();
 
-        await endpoint.SendLocal(new AuditThisMessage());
+        #region Enable
 
-        await endpoint.SendLocal(new DoNotAuditThisMessage());
+        endpointConfiguration.AuditProcessedMessagesTo("audit");
+        endpointConfiguration.FilterAuditQueue(
+            defaultFilter: FilterResult.IncludeInAudit);
 
-        Console.WriteLine("Press any key to stop program");
-        Console.Read();
-        await endpoint.Stop();
+        #endregion
+
+        var endpoint = await Endpoint.Start(endpointConfiguration)
+            .ConfigureAwait(false);
+
+        Console.WriteLine($"Audit Path:\r\n{AuditPath}");
+        Console.WriteLine("Press E to send a message that will be excluded");
+        Console.WriteLine("Press I to send a message that will be included");
+        Console.WriteLine("Press any other key to exit");
+
+        while (true)
+        {
+            Console.WriteLine();
+            var key = Console.ReadKey();
+            if (key.Key == ConsoleKey.I)
+            {
+                var message = new MessageToIncludeAudit();
+                await endpoint.SendLocal(message)
+                    .ConfigureAwait(false);
+                continue;
+            }
+            if (key.Key == ConsoleKey.E)
+            {
+                var message = new MessageToExcludeFromAudit();
+                await endpoint.SendLocal(message)
+                    .ConfigureAwait(false);
+                continue;
+            }
+            break;
+        }
+
+        await endpoint.Stop()
+            .ConfigureAwait(false);
     }
 }

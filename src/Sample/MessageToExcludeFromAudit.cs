@@ -1,9 +1,10 @@
 ﻿using NServiceBus;
 using NServiceBus.AuditFilter;
 
+#region MessageToExcludeFromAudit
 [ExcludeFromAudit]
-public class DoNotAuditThisMessage :
+public class MessageToExcludeFromAudit :
     IMessage
 {
-    public string? Content { get; set; }
 }
+#endregion

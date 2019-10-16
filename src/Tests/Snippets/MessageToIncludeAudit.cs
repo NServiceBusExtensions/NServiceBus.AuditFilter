@@ -1,9 +1,12 @@
 ﻿using NServiceBus;
 using NServiceBus.AuditFilter;
 
+#region MessageToIncludeAudit
+
 [IncludeInAudit]
-public class AuditThisMessage :
+public class MessageToIncludeAudit :
     IMessage
 {
-    public string? Content { get; set; }
 }
+
+#endregion
