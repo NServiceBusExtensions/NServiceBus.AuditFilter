@@ -6,7 +6,8 @@ namespace NServiceBus.AuditFilter
     /// Used to include a message in being sent to the Audit queue.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class)]
-    public class IncludeInAuditAttribute : Attribute
+    public sealed class IncludeInAuditAttribute :
+        Attribute
     {
     }
 }

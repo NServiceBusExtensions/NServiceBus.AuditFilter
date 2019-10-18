@@ -2,7 +2,8 @@
 using System.Threading.Tasks;
 using NServiceBus.Pipeline;
 
-class AuditFilterBehavior : Behavior<IAuditContext>
+class AuditFilterBehavior :
+    Behavior<IAuditContext>
 {
     public override Task Invoke(IAuditContext context, Func<Task> next)
     {

@@ -78,7 +78,7 @@ public class Tests :
 
     static async Task<List<AuditedMessageData>> Send(
         object message,
-        Action<EndpointConfiguration> addAuditFilter, 
+        Action<EndpointConfiguration> addAuditFilter,
         [CallerMemberName] string key = "")
     {
         var testingTransport = new TestingTransport(key);

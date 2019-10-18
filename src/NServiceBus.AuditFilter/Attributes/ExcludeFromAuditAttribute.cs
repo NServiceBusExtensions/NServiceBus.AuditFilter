@@ -6,7 +6,8 @@ namespace NServiceBus.AuditFilter
     /// Used to exclude a message from being sent to the Audit queue.
     /// </summary>
     [AttributeUsage(AttributeTargets.Class)]
-    public class ExcludeFromAuditAttribute : Attribute
+    public sealed class ExcludeFromAuditAttribute :
+        Attribute
     {
     }
 }

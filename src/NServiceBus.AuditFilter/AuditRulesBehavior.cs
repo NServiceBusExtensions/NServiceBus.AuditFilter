@@ -3,7 +3,8 @@ using System.Threading.Tasks;
 using NServiceBus.AuditFilter;
 using NServiceBus.Pipeline;
 
-class AuditRulesBehavior : Behavior<IIncomingLogicalMessageContext>
+class AuditRulesBehavior :
+    Behavior<IIncomingLogicalMessageContext>
 {
     Filter filter;
 
@@ -33,10 +34,6 @@ class AuditRulesBehavior : Behavior<IIncomingLogicalMessageContext>
         }
 
         var filterResult = filter(context.Message.Instance, context.MessageHeaders);
-        if (filterResult == FilterResult.IncludeInAudit)
-        {
-            return true;
-        }
-        return false;
+        return filterResult == FilterResult.IncludeInAudit;
     }
 }
