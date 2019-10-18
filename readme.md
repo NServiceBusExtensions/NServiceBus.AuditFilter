@@ -150,7 +150,7 @@ endpointConfiguration.FilterAuditQueue(
 
 ## Include/Exclude logic flow
 
-<img src="/flow.png" width="200px">
+<img src="/src/flow.png" width="200px">
 
 
 ## Sample
