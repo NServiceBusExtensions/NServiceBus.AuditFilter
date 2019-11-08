@@ -1,4 +1,5 @@
-﻿using NServiceBus.Pipeline;
+﻿using System.Diagnostics.CodeAnalysis;
+using NServiceBus.Pipeline;
 
 static class ContextHelper
 {
@@ -8,7 +9,9 @@ static class ContextHelper
         context.Extensions.Set(auditFilterContext);
     }
 
-    public static bool TryGetAuditContext(this IAuditContext context, out AuditFilterContext auditFilterContext)
+    public static bool TryGetAuditContext(
+        this IAuditContext context,
+        [NotNullWhen(true)] out AuditFilterContext? auditFilterContext)
     {
         return context.Extensions.TryGet(out auditFilterContext);
     }
