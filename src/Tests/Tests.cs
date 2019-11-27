@@ -4,11 +4,12 @@ using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using NServiceBus;
 using NServiceBus.AuditFilter;
+using VerifyXunit;
 using Xunit;
 using Xunit.Abstractions;
 
 public class Tests :
-    XunitApprovalBase
+    VerifyBase
 {
     [Fact]
     public async Task Skip_with_attribute_and_default_to_include()
