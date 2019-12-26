@@ -3,21 +3,21 @@ using NServiceBus.AuditFilter;
 
 public class Usage
 {
-    void FilterAuditByAttribute(EndpointConfiguration endpointConfiguration)
+    void FilterAuditByAttribute(EndpointConfiguration configuration)
     {
         #region DefaultIncludeInAudit
 
-        endpointConfiguration.FilterAuditQueue(FilterResult.IncludeInAudit);
+        configuration.FilterAuditQueue(FilterResult.IncludeInAudit);
 
         #endregion
         #region DefaultExcludeFromAudit
 
-        endpointConfiguration.FilterAuditQueue(FilterResult.ExcludeFromAudit);
+        configuration.FilterAuditQueue(FilterResult.ExcludeFromAudit);
 
         #endregion
         #region FilterAuditByDelegate
 
-        endpointConfiguration.FilterAuditQueue(
+        configuration.FilterAuditQueue(
             filter: (instance, headers) =>
             {
                 if (instance is MyMessage)

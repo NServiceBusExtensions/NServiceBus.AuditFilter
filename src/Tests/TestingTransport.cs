@@ -23,11 +23,11 @@ public class TestingTransport
         }
     }
 
-    public void ApplyToEndpoint(EndpointConfiguration endpointConfiguration)
+    public void ApplyToEndpoint(EndpointConfiguration configuration)
     {
         endpointInstanceCount++;
-        var transport = endpointConfiguration.UseTransport<LearningTransport>();
-        endpointConfiguration.AuditProcessedMessagesTo("audit");
+        var transport = configuration.UseTransport<LearningTransport>();
+        configuration.AuditProcessedMessagesTo("audit");
         transport.StorageDirectory(fullPath);
     }
 
