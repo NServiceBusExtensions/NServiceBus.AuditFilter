@@ -8,29 +8,29 @@ namespace NServiceBus
     /// </summary>
     public static class AuditFilterConfigurationExtensions
     {
-        public static void FilterAuditQueue(this EndpointConfiguration endpointConfiguration, FilterResult defaultFilter)
+        public static void FilterAuditQueue(this EndpointConfiguration configuration, FilterResult defaultFilter)
         {
-            Guard.AgainstNull(endpointConfiguration, nameof(endpointConfiguration));
+            Guard.AgainstNull(configuration, nameof(configuration));
 
             FilterResult Filter(object instance, IReadOnlyDictionary<string, string> headers)
             {
                 return defaultFilter;
             }
 
-            InnerFilter(endpointConfiguration, Filter);
+            InnerFilter(configuration, Filter);
         }
 
-        public static void FilterAuditQueue(this EndpointConfiguration endpointConfiguration, Filter filter)
+        public static void FilterAuditQueue(this EndpointConfiguration configuration, Filter filter)
         {
-            Guard.AgainstNull(endpointConfiguration, nameof(endpointConfiguration));
+            Guard.AgainstNull(configuration, nameof(configuration));
             Guard.AgainstNull(filter, nameof(filter));
 
-            InnerFilter(endpointConfiguration, filter);
+            InnerFilter(configuration, filter);
         }
 
-        static void InnerFilter(EndpointConfiguration endpointConfiguration, Filter filter)
+        static void InnerFilter(EndpointConfiguration configuration, Filter filter)
         {
-            var pipeline = endpointConfiguration.Pipeline;
+            var pipeline = configuration.Pipeline;
             pipeline.Register(
                 behavior: typeof(AuditFilterBehavior),
                 description: "Prevents marked messages from being forwarded to the audit queue");
