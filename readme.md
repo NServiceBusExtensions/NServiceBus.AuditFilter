@@ -25,9 +25,7 @@ Add message auditing filtering functionality to [NServiceBus](https://docs.parti
   * [Include/Exclude logic flow](#includeexclude-logic-flow)
   * [Sample](#sample)
     * [Decorate messages with attributes](#decorate-messages-with-attributes-1)
-    * [Add to EndpointConfiguration](#add-to-endpointconfiguration-1)
-<!-- endtoc -->
-
+    * [Add to EndpointConfiguration](#add-to-endpointconfiguration-1)<!-- endtoc -->
 
 <!--- StartOpenCollectiveBackers -->
 
@@ -69,7 +67,7 @@ public class MessageToIncludeAudit :
 {
 }
 ```
-<sup>[snippet source](/src/Sample/MessageToIncludeAudit.cs#L4-L10) / [anchor](#snippet-messagetoincludeaudit)</sup>
+<sup><a href='/src/Sample/MessageToIncludeAudit.cs#L4-L10' title='File snippet `messagetoincludeaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoincludeaudit' title='Navigate to start of snippet `messagetoincludeaudit`'>anchor</a></sup>
 <a id='snippet-messagetoincludeaudit-1'/></a>
 ```cs
 [IncludeInAudit]
@@ -78,7 +76,7 @@ public class MessageToIncludeAudit :
 {
 }
 ```
-<sup>[snippet source](/src/Tests/Snippets/MessageToIncludeAudit.cs#L4-L12) / [anchor](#snippet-messagetoincludeaudit-1)</sup>
+<sup><a href='/src/Tests/Snippets/MessageToIncludeAudit.cs#L4-L12' title='File snippet `messagetoincludeaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoincludeaudit-1' title='Navigate to start of snippet `messagetoincludeaudit`'>anchor</a></sup>
 <!-- endsnippet -->
 
 <!-- snippet: MessageToExcludeFromAudit -->
@@ -90,7 +88,7 @@ public class MessageToExcludeFromAudit :
 {
 }
 ```
-<sup>[snippet source](/src/Sample/MessageToExcludeFromAudit.cs#L4-L10) / [anchor](#snippet-messagetoexcludefromaudit)</sup>
+<sup><a href='/src/Sample/MessageToExcludeFromAudit.cs#L4-L10' title='File snippet `messagetoexcludefromaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit' title='Navigate to start of snippet `messagetoexcludefromaudit`'>anchor</a></sup>
 <a id='snippet-messagetoexcludefromaudit-1'/></a>
 ```cs
 [ExcludeFromAudit]
@@ -99,7 +97,7 @@ public class MessageToExcludeFromAudit :
 {
 }
 ```
-<sup>[snippet source](/src/Tests/Snippets/MessageToExcludeFromAudit.cs#L4-L12) / [anchor](#snippet-messagetoexcludefromaudit-1)</sup>
+<sup><a href='/src/Tests/Snippets/MessageToExcludeFromAudit.cs#L4-L12' title='File snippet `messagetoexcludefromaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit-1' title='Navigate to start of snippet `messagetoexcludefromaudit`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
@@ -110,9 +108,9 @@ With include by default
 <!-- snippet: DefaultIncludeInAudit -->
 <a id='snippet-defaultincludeinaudit'/></a>
 ```cs
-endpointConfiguration.FilterAuditQueue(FilterResult.IncludeInAudit);
+configuration.FilterAuditQueue(FilterResult.IncludeInAudit);
 ```
-<sup>[snippet source](/src/Tests/Snippets/Usage.cs#L8-L12) / [anchor](#snippet-defaultincludeinaudit)</sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L8-L12' title='File snippet `defaultincludeinaudit` was extracted from'>snippet source</a> | <a href='#snippet-defaultincludeinaudit' title='Navigate to start of snippet `defaultincludeinaudit`'>anchor</a></sup>
 <!-- endsnippet -->
 
 With exclude by default
@@ -120,9 +118,9 @@ With exclude by default
 <!-- snippet: DefaultExcludeFromAudit -->
 <a id='snippet-defaultexcludefromaudit'/></a>
 ```cs
-endpointConfiguration.FilterAuditQueue(FilterResult.ExcludeFromAudit);
+configuration.FilterAuditQueue(FilterResult.ExcludeFromAudit);
 ```
-<sup>[snippet source](/src/Tests/Snippets/Usage.cs#L13-L17) / [anchor](#snippet-defaultexcludefromaudit)</sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L13-L17' title='File snippet `defaultexcludefromaudit` was extracted from'>snippet source</a> | <a href='#snippet-defaultexcludefromaudit' title='Navigate to start of snippet `defaultexcludefromaudit`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
@@ -133,7 +131,7 @@ The fallback/default value can also be controlled by a delegate.
 <!-- snippet: FilterAuditByDelegate -->
 <a id='snippet-filterauditbydelegate'/></a>
 ```cs
-endpointConfiguration.FilterAuditQueue(
+configuration.FilterAuditQueue(
     filter: (instance, headers) =>
     {
         if (instance is MyMessage)
@@ -144,7 +142,7 @@ endpointConfiguration.FilterAuditQueue(
         return FilterResult.IncludeInAudit;
     });
 ```
-<sup>[snippet source](/src/Tests/Snippets/Usage.cs#L18-L31) / [anchor](#snippet-filterauditbydelegate)</sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L18-L31' title='File snippet `filterauditbydelegate` was extracted from'>snippet source</a> | <a href='#snippet-filterauditbydelegate' title='Navigate to start of snippet `filterauditbydelegate`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
@@ -169,7 +167,7 @@ public class MessageToExcludeFromAudit :
 {
 }
 ```
-<sup>[snippet source](/src/Sample/MessageToExcludeFromAudit.cs#L4-L10) / [anchor](#snippet-messagetoexcludefromaudit)</sup>
+<sup><a href='/src/Sample/MessageToExcludeFromAudit.cs#L4-L10' title='File snippet `messagetoexcludefromaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit' title='Navigate to start of snippet `messagetoexcludefromaudit`'>anchor</a></sup>
 <a id='snippet-messagetoexcludefromaudit-1'/></a>
 ```cs
 [ExcludeFromAudit]
@@ -178,7 +176,7 @@ public class MessageToExcludeFromAudit :
 {
 }
 ```
-<sup>[snippet source](/src/Tests/Snippets/MessageToExcludeFromAudit.cs#L4-L12) / [anchor](#snippet-messagetoexcludefromaudit-1)</sup>
+<sup><a href='/src/Tests/Snippets/MessageToExcludeFromAudit.cs#L4-L12' title='File snippet `messagetoexcludefromaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit-1' title='Navigate to start of snippet `messagetoexcludefromaudit`'>anchor</a></sup>
 <!-- endsnippet -->
 
 <!-- snippet: MessageToIncludeAudit -->
@@ -190,7 +188,7 @@ public class MessageToIncludeAudit :
 {
 }
 ```
-<sup>[snippet source](/src/Sample/MessageToIncludeAudit.cs#L4-L10) / [anchor](#snippet-messagetoincludeaudit)</sup>
+<sup><a href='/src/Sample/MessageToIncludeAudit.cs#L4-L10' title='File snippet `messagetoincludeaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoincludeaudit' title='Navigate to start of snippet `messagetoincludeaudit`'>anchor</a></sup>
 <a id='snippet-messagetoincludeaudit-1'/></a>
 ```cs
 [IncludeInAudit]
@@ -199,7 +197,7 @@ public class MessageToIncludeAudit :
 {
 }
 ```
-<sup>[snippet source](/src/Tests/Snippets/MessageToIncludeAudit.cs#L4-L12) / [anchor](#snippet-messagetoincludeaudit-1)</sup>
+<sup><a href='/src/Tests/Snippets/MessageToIncludeAudit.cs#L4-L12' title='File snippet `messagetoincludeaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoincludeaudit-1' title='Navigate to start of snippet `messagetoincludeaudit`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
@@ -212,7 +210,7 @@ endpointConfiguration.AuditProcessedMessagesTo("audit");
 endpointConfiguration.FilterAuditQueue(
     defaultFilter: FilterResult.IncludeInAudit);
 ```
-<sup>[snippet source](/src/Sample/Program.cs#L19-L25) / [anchor](#snippet-enable)</sup>
+<sup><a href='/src/Sample/Program.cs#L19-L25' title='File snippet `enable` was extracted from'>snippet source</a> | <a href='#snippet-enable' title='Navigate to start of snippet `enable`'>anchor</a></sup>
 <!-- endsnippet -->
 
 
