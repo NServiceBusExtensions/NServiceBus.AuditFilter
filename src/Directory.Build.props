@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project>
   <PropertyGroup>
-    <Version>2.0.3</Version>
+    <Version>2.0.4</Version>
     <PackageTags>NServiceBus, Audit, Filter</PackageTags>
     <NoWarn>CS1591</NoWarn>
+    <PackageLicenseFile>license.txt</PackageLicenseFile>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
   </PropertyGroup>
+  <ItemGroup>
+    <None Include="$(MSBuildThisFileFullPath)\..\..\license.txt"
+          Pack="true"
+          PackagePath="license.txt"/>
+  </ItemGroup>
 </Project>
