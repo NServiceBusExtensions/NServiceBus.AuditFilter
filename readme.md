@@ -16,8 +16,6 @@ Add message auditing filtering functionality to [NServiceBus](https://docs.parti
 ## Contents
 
   * [Community backed](#community-backed)
-    * [Sponsors](#sponsors)
-    * [Patrons](#patrons)
   * [Usage](#usage)
     * [Decorate messages with attributes](#decorate-messages-with-attributes)
     * [Add to EndpointConfiguration](#add-to-endpointconfiguration)
