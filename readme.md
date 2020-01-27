@@ -23,7 +23,8 @@ Add message auditing filtering functionality to [NServiceBus](https://docs.parti
   * [Include/Exclude logic flow](#includeexclude-logic-flow)
   * [Sample](#sample)
     * [Decorate messages with attributes](#decorate-messages-with-attributes-1)
-    * [Add to EndpointConfiguration](#add-to-endpointconfiguration-1)<!-- endtoc -->
+    * [Add to EndpointConfiguration](#add-to-endpointconfiguration-1)
+  * [Security contact information](#security-contact-information)<!-- endtoc -->
 
 <!--- StartOpenCollectiveBackers -->
 
@@ -209,9 +210,9 @@ endpointConfiguration.FilterAuditQueue(
 <!-- endsnippet -->
 
 
-## Release Notes
+## Security contact information
 
-See [closed milestones](../../milestones?state=closed).
+To report a security vulnerability, use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.
 
 
 ## Icon
