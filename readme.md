@@ -71,7 +71,7 @@ https://nuget.org/packages/NServiceBus.AuditFilter/
 ### Decorate messages with attributes
 
 <!-- snippet: MessageToIncludeAudit -->
-<a id='snippet-messagetoincludeaudit'></a>
+<a id='fcff5586'></a>
 ```cs
 [IncludeInAudit]
 public class MessageToIncludeAudit :
@@ -79,8 +79,8 @@ public class MessageToIncludeAudit :
 {
 }
 ```
-<sup><a href='/src/Sample/MessageToIncludeAudit.cs#L4-L10' title='File snippet `messagetoincludeaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoincludeaudit' title='Navigate to start of snippet `messagetoincludeaudit`'>anchor</a></sup>
-<a id='snippet-messagetoincludeaudit-1'></a>
+<sup><a href='/src/Sample/MessageToIncludeAudit.cs#L4-L10' title='Snippet source file'>snippet source</a> | <a href='#fcff5586' title='Start of snippet'>anchor</a></sup>
+<a id='fcff5586-1'></a>
 ```cs
 [IncludeInAudit]
 public class MessageToIncludeAudit :
@@ -88,11 +88,11 @@ public class MessageToIncludeAudit :
 {
 }
 ```
-<sup><a href='/src/Tests/Snippets/MessageToIncludeAudit.cs#L4-L12' title='File snippet `messagetoincludeaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoincludeaudit-1' title='Navigate to start of snippet `messagetoincludeaudit`'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/MessageToIncludeAudit.cs#L4-L12' title='Snippet source file'>snippet source</a> | <a href='#fcff5586-1' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 <!-- snippet: MessageToExcludeFromAudit -->
-<a id='snippet-messagetoexcludefromaudit'></a>
+<a id='d6919219'></a>
 ```cs
 [ExcludeFromAudit]
 public class MessageToExcludeFromAudit :
@@ -100,8 +100,8 @@ public class MessageToExcludeFromAudit :
 {
 }
 ```
-<sup><a href='/src/Sample/MessageToExcludeFromAudit.cs#L4-L10' title='File snippet `messagetoexcludefromaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit' title='Navigate to start of snippet `messagetoexcludefromaudit`'>anchor</a></sup>
-<a id='snippet-messagetoexcludefromaudit-1'></a>
+<sup><a href='/src/Sample/MessageToExcludeFromAudit.cs#L4-L10' title='Snippet source file'>snippet source</a> | <a href='#d6919219' title='Start of snippet'>anchor</a></sup>
+<a id='d6919219-1'></a>
 ```cs
 [ExcludeFromAudit]
 public class MessageToExcludeFromAudit :
@@ -109,7 +109,7 @@ public class MessageToExcludeFromAudit :
 {
 }
 ```
-<sup><a href='/src/Tests/Snippets/MessageToExcludeFromAudit.cs#L4-L12' title='File snippet `messagetoexcludefromaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit-1' title='Navigate to start of snippet `messagetoexcludefromaudit`'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/MessageToExcludeFromAudit.cs#L4-L12' title='Snippet source file'>snippet source</a> | <a href='#d6919219-1' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -118,21 +118,21 @@ public class MessageToExcludeFromAudit :
 With include by default
 
 <!-- snippet: DefaultIncludeInAudit -->
-<a id='snippet-defaultincludeinaudit'></a>
+<a id='56d30ec3'></a>
 ```cs
 configuration.FilterAuditQueue(FilterResult.IncludeInAudit);
 ```
-<sup><a href='/src/Tests/Snippets/Usage.cs#L8-L12' title='File snippet `defaultincludeinaudit` was extracted from'>snippet source</a> | <a href='#snippet-defaultincludeinaudit' title='Navigate to start of snippet `defaultincludeinaudit`'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L8-L12' title='Snippet source file'>snippet source</a> | <a href='#56d30ec3' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 With exclude by default
 
 <!-- snippet: DefaultExcludeFromAudit -->
-<a id='snippet-defaultexcludefromaudit'></a>
+<a id='91678749'></a>
 ```cs
 configuration.FilterAuditQueue(FilterResult.ExcludeFromAudit);
 ```
-<sup><a href='/src/Tests/Snippets/Usage.cs#L13-L17' title='File snippet `defaultexcludefromaudit` was extracted from'>snippet source</a> | <a href='#snippet-defaultexcludefromaudit' title='Navigate to start of snippet `defaultexcludefromaudit`'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L13-L17' title='Snippet source file'>snippet source</a> | <a href='#91678749' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -141,7 +141,7 @@ configuration.FilterAuditQueue(FilterResult.ExcludeFromAudit);
 The fallback/default value can also be controlled by a delegate.
 
 <!-- snippet: FilterAuditByDelegate -->
-<a id='snippet-filterauditbydelegate'></a>
+<a id='091f9896'></a>
 ```cs
 configuration.FilterAuditQueue(
     filter: (instance, headers) =>
@@ -154,7 +154,7 @@ configuration.FilterAuditQueue(
         return FilterResult.IncludeInAudit;
     });
 ```
-<sup><a href='/src/Tests/Snippets/Usage.cs#L18-L31' title='File snippet `filterauditbydelegate` was extracted from'>snippet source</a> | <a href='#snippet-filterauditbydelegate' title='Navigate to start of snippet `filterauditbydelegate`'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L18-L31' title='Snippet source file'>snippet source</a> | <a href='#091f9896' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -171,7 +171,7 @@ The sample uses the [Learning Transport](https://docs.particular.net/transports/
 ### Decorate messages with attributes
 
 <!-- snippet: MessageToExcludeFromAudit -->
-<a id='snippet-messagetoexcludefromaudit'></a>
+<a id='d6919219'></a>
 ```cs
 [ExcludeFromAudit]
 public class MessageToExcludeFromAudit :
@@ -179,8 +179,8 @@ public class MessageToExcludeFromAudit :
 {
 }
 ```
-<sup><a href='/src/Sample/MessageToExcludeFromAudit.cs#L4-L10' title='File snippet `messagetoexcludefromaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit' title='Navigate to start of snippet `messagetoexcludefromaudit`'>anchor</a></sup>
-<a id='snippet-messagetoexcludefromaudit-1'></a>
+<sup><a href='/src/Sample/MessageToExcludeFromAudit.cs#L4-L10' title='Snippet source file'>snippet source</a> | <a href='#d6919219' title='Start of snippet'>anchor</a></sup>
+<a id='d6919219-1'></a>
 ```cs
 [ExcludeFromAudit]
 public class MessageToExcludeFromAudit :
@@ -188,11 +188,11 @@ public class MessageToExcludeFromAudit :
 {
 }
 ```
-<sup><a href='/src/Tests/Snippets/MessageToExcludeFromAudit.cs#L4-L12' title='File snippet `messagetoexcludefromaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit-1' title='Navigate to start of snippet `messagetoexcludefromaudit`'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/MessageToExcludeFromAudit.cs#L4-L12' title='Snippet source file'>snippet source</a> | <a href='#d6919219-1' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 <!-- snippet: MessageToIncludeAudit -->
-<a id='snippet-messagetoincludeaudit'></a>
+<a id='fcff5586'></a>
 ```cs
 [IncludeInAudit]
 public class MessageToIncludeAudit :
@@ -200,8 +200,8 @@ public class MessageToIncludeAudit :
 {
 }
 ```
-<sup><a href='/src/Sample/MessageToIncludeAudit.cs#L4-L10' title='File snippet `messagetoincludeaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoincludeaudit' title='Navigate to start of snippet `messagetoincludeaudit`'>anchor</a></sup>
-<a id='snippet-messagetoincludeaudit-1'></a>
+<sup><a href='/src/Sample/MessageToIncludeAudit.cs#L4-L10' title='Snippet source file'>snippet source</a> | <a href='#fcff5586' title='Start of snippet'>anchor</a></sup>
+<a id='fcff5586-1'></a>
 ```cs
 [IncludeInAudit]
 public class MessageToIncludeAudit :
@@ -209,20 +209,20 @@ public class MessageToIncludeAudit :
 {
 }
 ```
-<sup><a href='/src/Tests/Snippets/MessageToIncludeAudit.cs#L4-L12' title='File snippet `messagetoincludeaudit` was extracted from'>snippet source</a> | <a href='#snippet-messagetoincludeaudit-1' title='Navigate to start of snippet `messagetoincludeaudit`'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/MessageToIncludeAudit.cs#L4-L12' title='Snippet source file'>snippet source</a> | <a href='#fcff5586-1' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
 ### Add to EndpointConfiguration
 
 <!-- snippet: Enable -->
-<a id='snippet-enable'></a>
+<a id='9905c339'></a>
 ```cs
 endpointConfiguration.AuditProcessedMessagesTo("audit");
 endpointConfiguration.FilterAuditQueue(
     defaultFilter: FilterResult.IncludeInAudit);
 ```
-<sup><a href='/src/Sample/Program.cs#L19-L25' title='File snippet `enable` was extracted from'>snippet source</a> | <a href='#snippet-enable' title='Navigate to start of snippet `enable`'>anchor</a></sup>
+<sup><a href='/src/Sample/Program.cs#L19-L25' title='Snippet source file'>snippet source</a> | <a href='#9905c339' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
