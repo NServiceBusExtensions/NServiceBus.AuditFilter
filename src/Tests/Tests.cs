@@ -61,7 +61,7 @@ public class Tests
     {
         var message = new SimpleMessage();
         var result = await Send(message, _ => _.FilterAuditQueue(
-            (instance, headers) => FilterResult.IncludeInAudit));
+            (_, _) => FilterResult.IncludeInAudit));
         Assert.True(result.Count == 1);
     }
 
@@ -70,7 +70,7 @@ public class Tests
     {
         var message = new SimpleMessage();
         var result = await Send(message, _ => _.FilterAuditQueue(
-            (instance, headers) => FilterResult.ExcludeFromAudit));
+            (_, _) => FilterResult.ExcludeFromAudit));
         Assert.True(result.Count == 0);
     }
 

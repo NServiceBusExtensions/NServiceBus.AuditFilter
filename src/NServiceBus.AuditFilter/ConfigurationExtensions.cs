@@ -35,7 +35,7 @@ namespace NServiceBus
                 behavior: typeof(AuditFilterBehavior),
                 description: "Prevents marked messages from being forwarded to the audit queue");
             pipeline.Register(
-                builder => new AuditRulesBehavior(filter),
+                _ => new AuditRulesBehavior(filter),
                 description: "Checks whether a message should be forwarded to the audit queue");
             pipeline.Register(
                 behavior: typeof(AuditFilterContextBehavior),

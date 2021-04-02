@@ -4,7 +4,7 @@ using NServiceBus.AuditFilter;
 
 static class AttributeCache
 {
-    static ConcurrentDictionary<Type, bool?> cache = new ConcurrentDictionary<Type, bool?>();
+    static ConcurrentDictionary<Type, bool?> cache = new();
 
     public static bool TryGetIncludeInAudit(Type type, out bool includeInAudit)
     {

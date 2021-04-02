@@ -99,7 +99,7 @@ public class TestingTransport
 
     static Dictionary<string, string> DeserializeMetadata(string messageMetadata)
     {
-        return JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(messageMetadata));
+        return JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(messageMetadata))!;
     }
 
     bool AreMessagesPending()
