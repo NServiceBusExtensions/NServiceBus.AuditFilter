@@ -55,11 +55,6 @@ Thanks to all the backing developers. Support this project by [becoming a patron
 <!--- EndOpenCollectiveBackers -->
 
 
-## Support via TideLift
-
-Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-nservicebus.auditfilter?utm_source=nuget-nservicebus.auditfilter&utm_medium=referral&utm_campaign=enterprise).
-
-
 ## NuGet package
 
 https://nuget.org/packages/NServiceBus.AuditFilter/
@@ -225,10 +220,6 @@ endpointConfiguration.FilterAuditQueue(
 <sup><a href='/src/Sample/Program.cs#L19-L25' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
-
-## Security contact information
-
-To report a security vulnerability, use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.
 
 
 ## Icon

@@ -5,7 +5,6 @@
 
 Add message auditing filtering functionality to [NServiceBus](https://docs.particular.net/nservicebus/operations/auditing).
 
-toc
 
 <!--- StartOpenCollectiveBackers -->
 
@@ -31,11 +30,6 @@ Thanks to all the backing developers. Support this project by [becoming a patron
 <a href="#" id="endofbacking"></a>
 
 <!--- EndOpenCollectiveBackers -->
-
-
-## Support via TideLift
-
-Support is available via a [Tidelift Subscription](https://tidelift.com/subscription/pkg/nuget-nservicebus.auditfilter?utm_source=nuget-nservicebus.auditfilter&utm_medium=referral&utm_campaign=enterprise).
 
 
 ## NuGet package
@@ -92,10 +86,6 @@ snippet: MessageToIncludeAudit
 
 snippet: Enable
 
-
-## Security contact information
-
-To report a security vulnerability, use the [Tidelift security contact](https://tidelift.com/security). Tidelift will coordinate the fix and disclosure.
 
 
 ## Icon
