@@ -12,22 +12,6 @@ To change this file edit the source file and then run MarkdownSnippets.
 
 Add message auditing filtering functionality to [NServiceBus](https://docs.particular.net/nservicebus/operations/auditing).
 
-<!-- toc -->
-## Contents
-
-  * [Community backed](#community-backed)
-    * [Sponsors](#sponsors)
-    * [Patrons](#patrons)
-  * [Support via TideLift](#support-via-tidelift)
-  * [Usage](#usage)
-    * [Decorate messages with attributes](#decorate-messages-with-attributes)
-    * [Add to EndpointConfiguration](#add-to-endpointconfiguration)
-    * [Delegate filter fallback](#delegate-filter-fallback)
-  * [Include/Exclude logic flow](#includeexclude-logic-flow)
-  * [Sample](#sample)
-    * [Decorate messages with attributes](#decorate-messages-with-attributes-1)
-    * [Add to EndpointConfiguration](#add-to-endpointconfiguration-1)
-  * [Security contact information](#security-contact-information)<!-- endToc -->
 
 <!--- StartOpenCollectiveBackers -->
 
