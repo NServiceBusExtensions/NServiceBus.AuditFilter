@@ -123,7 +123,7 @@ The fallback/default value can also be controlled by a delegate.
 <a id='snippet-filterauditbydelegate'></a>
 ```cs
 configuration.FilterAuditQueue(
-    filter: (instance, headers) =>
+    filter: (instance, _) =>
     {
         if (instance is MyMessage)
         {
