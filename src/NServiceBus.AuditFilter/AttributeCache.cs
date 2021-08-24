@@ -26,7 +26,7 @@ static class AttributeCache
 
         if (includeInAuditAttribute != null && excludeFromAuditAttribute != null)
         {
-            throw new Exception($"The message '{type.FullName}' contains both {nameof(IncludeInAuditAttribute)} and {nameof(ExcludeFromAuditAttribute)}.");
+            throw new($"The message '{type.FullName}' contains both {nameof(IncludeInAuditAttribute)} and {nameof(ExcludeFromAuditAttribute)}.");
         }
 
         if (includeInAuditAttribute != null)

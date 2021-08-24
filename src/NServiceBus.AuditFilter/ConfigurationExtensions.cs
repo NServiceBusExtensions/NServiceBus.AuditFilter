@@ -10,8 +10,6 @@ namespace NServiceBus
     {
         public static void FilterAuditQueue(this EndpointConfiguration configuration, FilterResult defaultFilter)
         {
-            Guard.AgainstNull(configuration, nameof(configuration));
-
             FilterResult Filter(object instance, IReadOnlyDictionary<string, string> headers)
             {
                 return defaultFilter;
@@ -22,9 +20,6 @@ namespace NServiceBus
 
         public static void FilterAuditQueue(this EndpointConfiguration configuration, Filter filter)
         {
-            Guard.AgainstNull(configuration, nameof(configuration));
-            Guard.AgainstNull(filter, nameof(filter));
-
             InnerFilter(configuration, filter);
         }
 

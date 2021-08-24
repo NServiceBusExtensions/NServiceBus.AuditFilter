@@ -35,7 +35,7 @@ public class TestingTransport
     {
         if (endpointInstances.Length != endpointInstanceCount)
         {
-            throw new Exception();
+            throw new();
         }
         await Task.Delay(100);
         var breaker = 0;
@@ -50,7 +50,7 @@ public class TestingTransport
             breaker++;
             if (breaker > 100)
             {
-                throw new Exception("Breaker hit before all pending messages were flushed.");
+                throw new("Breaker hit before all pending messages were flushed.");
             }
         }
 
@@ -68,8 +68,7 @@ public class TestingTransport
         foreach (var metadataFile in Directory.EnumerateFiles(auditPath, "*.metadata.txt"))
         {
             var metadata = DeserializeMetadata(metadataFile);
-            yield return new AuditedMessageData
-            (
+            yield return new(
                 messageId: Guid.Parse(metadata[Headers.MessageId]),
                 processingEndpoint: metadata[Headers.ProcessingEndpoint],
                 originatingEndpoint: metadata[Headers.OriginatingEndpoint],

@@ -18,7 +18,7 @@ public class Usage
         #region FilterAuditByDelegate
 
         configuration.FilterAuditQueue(
-            filter: (instance, headers) =>
+            filter: (instance, _) =>
             {
                 if (instance is MyMessage)
                 {
