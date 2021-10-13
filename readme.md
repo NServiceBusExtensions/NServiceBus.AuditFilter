@@ -201,7 +201,7 @@ endpointConfiguration.AuditProcessedMessagesTo("audit");
 endpointConfiguration.FilterAuditQueue(
     defaultFilter: FilterResult.IncludeInAudit);
 ```
-<sup><a href='/src/Sample/Program.cs#L19-L25' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Sample/Program.cs#L16-L22' title='Snippet source file'>snippet source</a> | <a href='#snippet-enable' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
