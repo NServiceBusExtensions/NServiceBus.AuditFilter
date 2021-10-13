@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections.Concurrent;
-using NServiceBus.AuditFilter;
+﻿using NServiceBus.AuditFilter;
 
 static class AttributeCache
 {

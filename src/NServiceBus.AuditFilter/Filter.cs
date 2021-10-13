@@ -1,6 +1,3 @@
-﻿using System.Collections.Generic;
+﻿namespace NServiceBus.AuditFilter;
 
-namespace NServiceBus.AuditFilter
-{
-    public delegate FilterResult Filter(object instance, IReadOnlyDictionary<string,string> headers);
-}
+public delegate FilterResult Filter(object instance, IReadOnlyDictionary<string,string> headers);

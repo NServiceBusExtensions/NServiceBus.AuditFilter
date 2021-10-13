@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-
-public class AuditedMessageData
+﻿public class AuditedMessageData
 {
     public Guid MessageId { get;  }
     public Type? MessageType { get;  }

@@ -1,8 +1,7 @@
-﻿namespace NServiceBus.AuditFilter
+﻿namespace NServiceBus.AuditFilter;
+
+public enum FilterResult
 {
-    public enum FilterResult
-    {
-        ExcludeFromAudit,
-        IncludeInAudit,
-    }
+    ExcludeFromAudit,
+    IncludeInAudit,
 }

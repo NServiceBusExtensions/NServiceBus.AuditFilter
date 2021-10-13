@@ -1,5 +1,4 @@
-﻿using System.Threading.Tasks;
-using NServiceBus;
+﻿using NServiceBus;
 
 class MyHandler :
     IHandleMessages<MessageWithIncludeInAudit>,
