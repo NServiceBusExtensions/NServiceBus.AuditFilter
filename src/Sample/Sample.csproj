@@ -6,6 +6,6 @@
   </PropertyGroup>
   <ItemGroup>
     <ProjectReference Include="..\NServiceBus.AuditFilter\NServiceBus.AuditFilter.csproj" />
-    <PackageReference Include="ProjectDefaults" Version="1.0.61" PrivateAssets="All" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.62" PrivateAssets="all" />
   </ItemGroup>
 </Project>
