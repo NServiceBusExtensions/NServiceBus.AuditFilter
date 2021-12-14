@@ -1,6 +1,5 @@
 ﻿using NServiceBus;
 using NServiceBus.AuditFilter;
-using Xunit;
 
 public class Tests
 {
