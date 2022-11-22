@@ -17,10 +17,8 @@ public static class AuditFilterConfigurationExtensions
         InnerFilter(configuration, Filter);
     }
 
-    public static void FilterAuditQueue(this EndpointConfiguration configuration, Filter filter)
-    {
+    public static void FilterAuditQueue(this EndpointConfiguration configuration, Filter filter) =>
         InnerFilter(configuration, filter);
-    }
 
     static void InnerFilter(EndpointConfiguration configuration, Filter filter)
     {

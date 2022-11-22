@@ -10,13 +10,9 @@ static class ContextHelper
 
     public static bool TryGetAuditContext(
         this IAuditContext context,
-        out AuditFilterContext auditFilterContext)
-    {
-        return context.Extensions.TryGet(out auditFilterContext);
-    }
+        out AuditFilterContext auditFilterContext) =>
+        context.Extensions.TryGet(out auditFilterContext);
 
-    public static AuditFilterContext GetAuditContext(this IIncomingLogicalMessageContext context)
-    {
-        return context.Extensions.Get<AuditFilterContext>();
-    }
+    public static AuditFilterContext GetAuditContext(this IIncomingLogicalMessageContext context) =>
+        context.Extensions.Get<AuditFilterContext>();
 }
