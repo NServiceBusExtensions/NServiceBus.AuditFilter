@@ -6,10 +6,8 @@ class AuditRulesBehavior :
 {
     Filter filter;
 
-    public AuditRulesBehavior(Filter filter)
-    {
+    public AuditRulesBehavior(Filter filter) =>
         this.filter = filter;
-    }
 
     public override Task Invoke(IIncomingLogicalMessageContext context, Func<Task> next)
     {

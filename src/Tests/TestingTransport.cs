@@ -90,24 +90,16 @@ public class TestingTransport
         return null;
     }
 
-    static Dictionary<string, string> DeserializeMetadata(string messageMetadata)
-    {
-        return JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(messageMetadata))!;
-    }
+    static Dictionary<string, string> DeserializeMetadata(string messageMetadata) =>
+        JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(messageMetadata))!;
 
-    bool AreMessagesPending()
-    {
-        return EndpointDirectories().Any(HasPendingMessages);
-    }
+    bool AreMessagesPending() =>
+        EndpointDirectories().Any(HasPendingMessages);
 
-    static bool HasPendingMessages(string endpointDirectory)
-    {
-        return Directory.EnumerateDirectories(endpointDirectory, ".pending")
+    static bool HasPendingMessages(string endpointDirectory) =>
+        Directory.EnumerateDirectories(endpointDirectory, ".pending")
             .Any(pending => Directory.EnumerateFiles(pending).Any());
-    }
 
-    IEnumerable<string> EndpointDirectories()
-    {
-        return Directory.EnumerateDirectories(fullPath);
-    }
+    IEnumerable<string> EndpointDirectories() =>
+        Directory.EnumerateDirectories(fullPath);
 }
