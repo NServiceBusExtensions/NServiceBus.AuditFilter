@@ -63,7 +63,7 @@ public class TestingTransport
         {
             var metadata = DeserializeMetadata(metadataFile);
             yield return new(
-                messageId: Guid.Parse(metadata[Headers.MessageId]),
+                messageId: new(metadata[Headers.MessageId]),
                 processingEndpoint: metadata[Headers.ProcessingEndpoint],
                 originatingEndpoint: metadata[Headers.OriginatingEndpoint],
                 messageType: GetMessageType(metadata),
