@@ -48,7 +48,7 @@ public class TestingTransport
             }
         }
 
-        await Task.WhenAll(endpointInstances.Select(x => x.Stop()));
+        await Task.WhenAll(endpointInstances.Select(_ => _.Stop()));
 
         return GetMessages().ToList();
     }

@@ -3,6 +3,7 @@
   <PropertyGroup>
     <Version>3.0.0</Version>
     <AssemblyVersion>1.0.0</AssemblyVersion>
+    <LangVersion>preview</LangVersion>
     <PackageTags>NServiceBus, Audit, Filter</PackageTags>
     <NoWarn>CS1591</NoWarn>
   </PropertyGroup>
