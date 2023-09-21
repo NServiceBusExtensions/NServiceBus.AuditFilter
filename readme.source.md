@@ -5,6 +5,8 @@
 
 Add message auditing filtering functionality to [NServiceBus](https://docs.particular.net/nservicebus/operations/auditing).
 
+**See [Milestones](../../milestones?state=closed) for release notes.**
+
 
 <!--- StartOpenCollectiveBackers -->
 
