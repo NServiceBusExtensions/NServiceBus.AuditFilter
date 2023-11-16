@@ -5,6 +5,4 @@
 /// </summary>
 [AttributeUsage(AttributeTargets.Class)]
 public sealed class ExcludeFromAuditAttribute :
-    Attribute
-{
-}
+    Attribute;

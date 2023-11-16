@@ -5,8 +5,6 @@ using NServiceBus.AuditFilter;
 
 [ExcludeFromAudit]
 public class MessageToExcludeFromAudit :
-    IMessage
-{
-}
+    IMessage;
 
 #endregion

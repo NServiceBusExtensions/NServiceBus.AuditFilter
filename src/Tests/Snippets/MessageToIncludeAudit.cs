@@ -5,8 +5,6 @@ using NServiceBus.AuditFilter;
 
 [IncludeInAudit]
 public class MessageToIncludeAudit :
-    IMessage
-{
-}
+    IMessage;
 
 #endregion

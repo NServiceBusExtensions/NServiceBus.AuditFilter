@@ -30,8 +30,5 @@ public class Usage
 
         #endregion
     }
-    public class MyMessage
-    {
-
-    }
+    public class MyMessage;
 }

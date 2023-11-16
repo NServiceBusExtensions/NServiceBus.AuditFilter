@@ -9,10 +9,8 @@ public static class AuditFilterConfigurationExtensions
 {
     public static void FilterAuditQueue(this EndpointConfiguration configuration, FilterResult defaultFilter)
     {
-        FilterResult Filter(object instance, IReadOnlyDictionary<string, string> headers)
-        {
-            return defaultFilter;
-        }
+        FilterResult Filter(object instance, IReadOnlyDictionary<string, string> headers) =>
+            defaultFilter;
 
         InnerFilter(configuration, Filter);
     }
