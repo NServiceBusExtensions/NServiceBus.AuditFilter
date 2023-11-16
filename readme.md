@@ -56,20 +56,16 @@ https://nuget.org/packages/NServiceBus.AuditFilter/
 ```cs
 [IncludeInAudit]
 public class MessageToIncludeAudit :
-    IMessage
-{
-}
+    IMessage;
 ```
-<sup><a href='/src/Sample/MessageToIncludeAudit.cs#L4-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoincludeaudit' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Sample/MessageToIncludeAudit.cs#L4-L8' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoincludeaudit' title='Start of snippet'>anchor</a></sup>
 <a id='snippet-messagetoincludeaudit-1'></a>
 ```cs
 [IncludeInAudit]
 public class MessageToIncludeAudit :
-    IMessage
-{
-}
+    IMessage;
 ```
-<sup><a href='/src/Tests/Snippets/MessageToIncludeAudit.cs#L4-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoincludeaudit-1' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/MessageToIncludeAudit.cs#L4-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoincludeaudit-1' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 <!-- snippet: MessageToExcludeFromAudit -->
@@ -77,20 +73,16 @@ public class MessageToIncludeAudit :
 ```cs
 [ExcludeFromAudit]
 public class MessageToExcludeFromAudit :
-    IMessage
-{
-}
+    IMessage;
 ```
-<sup><a href='/src/Sample/MessageToExcludeFromAudit.cs#L4-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Sample/MessageToExcludeFromAudit.cs#L4-L8' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit' title='Start of snippet'>anchor</a></sup>
 <a id='snippet-messagetoexcludefromaudit-1'></a>
 ```cs
 [ExcludeFromAudit]
 public class MessageToExcludeFromAudit :
-    IMessage
-{
-}
+    IMessage;
 ```
-<sup><a href='/src/Tests/Snippets/MessageToExcludeFromAudit.cs#L4-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit-1' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/MessageToExcludeFromAudit.cs#L4-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit-1' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -156,20 +148,16 @@ The sample uses the [Learning Transport](https://docs.particular.net/transports/
 ```cs
 [ExcludeFromAudit]
 public class MessageToExcludeFromAudit :
-    IMessage
-{
-}
+    IMessage;
 ```
-<sup><a href='/src/Sample/MessageToExcludeFromAudit.cs#L4-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Sample/MessageToExcludeFromAudit.cs#L4-L8' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit' title='Start of snippet'>anchor</a></sup>
 <a id='snippet-messagetoexcludefromaudit-1'></a>
 ```cs
 [ExcludeFromAudit]
 public class MessageToExcludeFromAudit :
-    IMessage
-{
-}
+    IMessage;
 ```
-<sup><a href='/src/Tests/Snippets/MessageToExcludeFromAudit.cs#L4-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit-1' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/MessageToExcludeFromAudit.cs#L4-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoexcludefromaudit-1' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 <!-- snippet: MessageToIncludeAudit -->
@@ -177,20 +165,16 @@ public class MessageToExcludeFromAudit :
 ```cs
 [IncludeInAudit]
 public class MessageToIncludeAudit :
-    IMessage
-{
-}
+    IMessage;
 ```
-<sup><a href='/src/Sample/MessageToIncludeAudit.cs#L4-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoincludeaudit' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Sample/MessageToIncludeAudit.cs#L4-L8' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoincludeaudit' title='Start of snippet'>anchor</a></sup>
 <a id='snippet-messagetoincludeaudit-1'></a>
 ```cs
 [IncludeInAudit]
 public class MessageToIncludeAudit :
-    IMessage
-{
-}
+    IMessage;
 ```
-<sup><a href='/src/Tests/Snippets/MessageToIncludeAudit.cs#L4-L12' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoincludeaudit-1' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/MessageToIncludeAudit.cs#L4-L10' title='Snippet source file'>snippet source</a> | <a href='#snippet-messagetoincludeaudit-1' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
