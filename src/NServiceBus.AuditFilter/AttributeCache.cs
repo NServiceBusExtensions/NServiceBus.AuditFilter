@@ -2,7 +2,7 @@
 
 static class AttributeCache
 {
-    static ConcurrentDictionary<Type, bool?> cache = new();
+    static ConcurrentDictionary<Type, bool?> cache = [];
 
     public static bool TryGetIncludeInAudit(Type type, out bool includeInAudit)
     {
