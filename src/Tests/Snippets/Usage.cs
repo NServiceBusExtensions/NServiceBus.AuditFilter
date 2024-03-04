@@ -3,7 +3,7 @@ using NServiceBus.AuditFilter;
 
 public class Usage
 {
-    void FilterAuditByAttribute(EndpointConfiguration configuration)
+    static void FilterAuditByAttribute(EndpointConfiguration configuration)
     {
         #region DefaultIncludeInAudit
 
