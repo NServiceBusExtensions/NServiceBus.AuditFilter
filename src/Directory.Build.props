@@ -7,5 +7,7 @@
     <PackageTags>NServiceBus, Audit, Filter</PackageTags>
     <NoWarn>CS1591</NoWarn>
     <ResolveAssemblyReferencesSilent>true</ResolveAssemblyReferencesSilent>
+    <NuGetAuditMode>all</NuGetAuditMode>
+    <NuGetAuditLevel>low</NuGetAuditLevel>
   </PropertyGroup>
 </Project>
