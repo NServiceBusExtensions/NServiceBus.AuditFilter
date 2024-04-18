@@ -1,4 +1,3 @@
-using NServiceBus;
 using NServiceBus.Logging;
 
 public class MyHandler :

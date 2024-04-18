@@ -1,7 +1,4 @@
-﻿using NServiceBus;
-using NServiceBus.AuditFilter;
-
-[ExcludeFromAudit]
+﻿[ExcludeFromAudit]
 public class MessageWithExcludeFromAudit :
     IMessage
 {

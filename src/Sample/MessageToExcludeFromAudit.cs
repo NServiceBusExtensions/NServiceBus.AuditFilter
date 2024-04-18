@@ -1,5 +1,4 @@
-﻿using NServiceBus;
-using NServiceBus.AuditFilter;
+﻿using NServiceBus.AuditFilter;
 
 #region MessageToExcludeFromAudit
 [ExcludeFromAudit]

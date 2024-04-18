@@ -1,7 +1,4 @@
-﻿using NServiceBus;
-using NServiceBus.AuditFilter;
-
-[IncludeInAudit]
+﻿[IncludeInAudit]
 public class MessageWithIncludeInAudit :
     IMessage
 {

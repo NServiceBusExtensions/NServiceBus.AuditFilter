@@ -1,7 +1,4 @@
-﻿using NServiceBus;
-using NServiceBus.AuditFilter;
-
-#region MessageToIncludeAudit
+﻿#region MessageToIncludeAudit
 
 [IncludeInAudit]
 public class MessageToIncludeAudit :

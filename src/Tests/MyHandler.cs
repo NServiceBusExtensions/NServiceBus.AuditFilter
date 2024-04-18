@@ -1,6 +1,4 @@
-﻿using NServiceBus;
-
-class MyHandler :
+﻿class MyHandler :
     IHandleMessages<MessageWithIncludeInAudit>,
     IHandleMessages<MessageWithExcludeFromAudit>,
     IHandleMessages<SimpleMessage>

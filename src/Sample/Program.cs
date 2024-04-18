@@ -1,4 +1,3 @@
-using NServiceBus;
 using NServiceBus.AuditFilter;
 
 class Program
@@ -12,7 +11,7 @@ class Program
 
         endpointConfiguration.UsePersistence<LearningPersistence>();
         endpointConfiguration.UseTransport<LearningTransport>();
-
+        endpointConfiguration.UseSerialization<SystemJsonSerializer>();
         #region Enable
 
         endpointConfiguration.AuditProcessedMessagesTo("audit");

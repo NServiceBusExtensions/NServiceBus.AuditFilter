@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using NServiceBus;
 
 public class TestingTransport
 {

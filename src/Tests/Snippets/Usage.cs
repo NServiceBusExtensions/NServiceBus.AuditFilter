@@ -1,7 +1,4 @@
-﻿using NServiceBus;
-using NServiceBus.AuditFilter;
-
-public class Usage
+﻿public class Usage
 {
     static void FilterAuditByAttribute(EndpointConfiguration configuration)
     {
