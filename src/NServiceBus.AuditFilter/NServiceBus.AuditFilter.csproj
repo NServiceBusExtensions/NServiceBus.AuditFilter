@@ -6,6 +6,6 @@
   <ItemGroup>
     <PackageReference Include="ProjectDefaults" Version="1.0.126" PrivateAssets="all" />
     <PackageReference Include="NServiceBus" Version="9.0.0" />
-    <PackageReference Include="Polyfill" Version="4.7.0" PrivateAssets="all" />
+    <PackageReference Include="Polyfill" Version="4.9.0" PrivateAssets="all" />
   </ItemGroup>
 </Project>
