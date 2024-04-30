@@ -4,7 +4,7 @@
     <TargetFramework>net8.0</TargetFramework>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="ProjectDefaults" Version="1.0.126" PrivateAssets="all" />
+    <PackageReference Include="ProjectDefaults" Version="1.0.127" PrivateAssets="all" />
     <PackageReference Include="NServiceBus" Version="9.0.0" />
     <PackageReference Include="Polyfill" Version="5.2.2" PrivateAssets="all" />
   </ItemGroup>
