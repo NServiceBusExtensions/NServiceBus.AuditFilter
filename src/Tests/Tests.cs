@@ -75,9 +75,6 @@
         var configuration = new EndpointConfiguration("AuditFilterSample");
         configuration.UsePersistence<LearningPersistence>();
         configuration.UseSerialization<SystemJsonSerializer>();
-        configuration
-            .AssemblyScanner()
-            .ExcludeAssemblies("xunit.runner.utility.netcoreapp10.dll");
         testingTransport.ApplyToEndpoint(configuration);
         addAuditFilter(configuration);
 
