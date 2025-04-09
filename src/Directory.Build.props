@@ -2,6 +2,7 @@
 <Project>
   <PropertyGroup>
     <Version>5.0.1</Version>
+    <NoWarn>NU1608</NoWarn>
     <AssemblyVersion>1.0.0</AssemblyVersion>
     <LangVersion>preview</LangVersion>
     <PackageTags>NServiceBus, Audit, Filter</PackageTags>
