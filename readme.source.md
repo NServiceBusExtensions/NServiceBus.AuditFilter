@@ -1,7 +1,7 @@
 # <img src="/src/icon.png" height="30px"> NServiceBus.Community.AuditFilter
 
-[![Build status](https://img.shields.io/appveyor/build/SimonCropp/nservicebus-community-AuditFilter)](https://ci.appveyor.com/project/SimonCropp/nservicebus-community-AuditFilter)
-[![NuGet Status](https://img.shields.io/nuget/v/NServiceBus.AuditFilter.svg)](https://www.nuget.org/packages/NServiceBus.AuditFilter/)
+[![Build status](https://img.shields.io/appveyor/build/SimonCropp/nservicebus-community-auditFilter)](https://ci.appveyor.com/project/SimonCropp/nservicebus-community-auditFilter)
+[![NuGet Status](https://img.shields.io/nuget/v/NServiceBus.Community.AuditFilter.svg)](https://www.nuget.org/packages/NServiceBus.Community.AuditFilter/)
 
 Add message auditing filtering functionality to [NServiceBus](https://docs.particular.net/nservicebus/operations/auditing).
 
