@@ -5,7 +5,7 @@
     <OutputType>Exe</OutputType>
   </PropertyGroup>
   <ItemGroup>
-    <ProjectReference Include="..\NServiceBus.AuditFilter\NServiceBus.AuditFilter.csproj" />
+    <ProjectReference Include="..\NServiceBus.Community.AuditFilter\NServiceBus.Community.AuditFilter.csproj" />
     <PackageReference Include="ProjectDefaults" PrivateAssets="all" />
   </ItemGroup>
 </Project>

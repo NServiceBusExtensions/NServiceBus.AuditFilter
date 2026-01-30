@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json;
-
-public class TestingTransport
+﻿public class TestingTransport
 {
     string fullPath;
     string auditPath;

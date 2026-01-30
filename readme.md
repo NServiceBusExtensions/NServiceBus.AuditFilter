@@ -5,9 +5,9 @@ Source File: /readme.source.md
 To change this file edit the source file and then run MarkdownSnippets.
 -->
 
-# <img src="/src/icon.png" height="30px"> NServiceBus.AuditFilter
+# <img src="/src/icon.png" height="30px"> NServiceBus.Community.AuditFilter
 
-[![Build status](https://ci.appveyor.com/api/projects/status/chhl6coclht4mm9h/branch/main?svg=true)](https://ci.appveyor.com/project/SimonCropp/nservicebus-AuditFilter)
+[![Build status](https://img.shields.io/appveyor/build/SimonCropp/nservicebus-community-AuditFilter)](https://ci.appveyor.com/project/SimonCropp/nservicebus-community-AuditFilter)
 [![NuGet Status](https://img.shields.io/nuget/v/NServiceBus.AuditFilter.svg)](https://www.nuget.org/packages/NServiceBus.AuditFilter/)
 
 Add message auditing filtering functionality to [NServiceBus](https://docs.particular.net/nservicebus/operations/auditing).
@@ -43,7 +43,7 @@ Thanks to all the backing developers. Support this project by [becoming a patron
 
 ## NuGet package
 
-https://nuget.org/packages/NServiceBus.AuditFilter/
+https://nuget.org/packages/NServiceBus.Community.AuditFilter/
 
 
 ## Usage
