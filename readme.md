@@ -105,7 +105,7 @@ With exclude by default
 ```cs
 configuration.FilterAuditQueue(FilterResult.ExcludeFromAudit);
 ```
-<sup><a href='/src/Tests/Snippets/Usage.cs#L10-L14' title='Snippet source file'>snippet source</a> | <a href='#snippet-DefaultExcludeFromAudit' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L11-L15' title='Snippet source file'>snippet source</a> | <a href='#snippet-DefaultExcludeFromAudit' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
@@ -127,7 +127,7 @@ configuration.FilterAuditQueue(
         return FilterResult.IncludeInAudit;
     });
 ```
-<sup><a href='/src/Tests/Snippets/Usage.cs#L15-L28' title='Snippet source file'>snippet source</a> | <a href='#snippet-FilterAuditByDelegate' title='Start of snippet'>anchor</a></sup>
+<sup><a href='/src/Tests/Snippets/Usage.cs#L17-L30' title='Snippet source file'>snippet source</a> | <a href='#snippet-FilterAuditByDelegate' title='Start of snippet'>anchor</a></sup>
 <!-- endSnippet -->
 
 
