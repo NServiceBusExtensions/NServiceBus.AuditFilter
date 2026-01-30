@@ -1,2 +1,3 @@
-﻿global using Newtonsoft.Json;
+﻿// Global using directives
+
 global using NServiceBus.AuditFilter;

@@ -1,6 +1,4 @@
-﻿using NServiceBus.AuditFilter;
-
-static class AttributeCache
+﻿static class AttributeCache
 {
     static ConcurrentDictionary<Type, bool?> cache = [];
 

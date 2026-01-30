@@ -1,5 +1,4 @@
-﻿using NServiceBus.AuditFilter;
-using NServiceBus.Pipeline;
+﻿using NServiceBus.Pipeline;
 
 class AuditRulesBehavior :
     Behavior<IIncomingLogicalMessageContext>

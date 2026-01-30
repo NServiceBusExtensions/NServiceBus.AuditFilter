@@ -7,11 +7,13 @@
         configuration.FilterAuditQueue(FilterResult.IncludeInAudit);
 
         #endregion
+
         #region DefaultExcludeFromAudit
 
         configuration.FilterAuditQueue(FilterResult.ExcludeFromAudit);
 
         #endregion
+
         #region FilterAuditByDelegate
 
         configuration.FilterAuditQueue(
@@ -27,5 +29,6 @@
 
         #endregion
     }
+
     public class MyMessage;
 }

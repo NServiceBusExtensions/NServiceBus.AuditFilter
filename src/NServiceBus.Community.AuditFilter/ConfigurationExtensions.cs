@@ -1,6 +1,4 @@
-﻿using NServiceBus.AuditFilter;
-
-namespace NServiceBus;
+﻿namespace NServiceBus;
 
 /// <summary>
 /// Extensions to control what messages are audited.
