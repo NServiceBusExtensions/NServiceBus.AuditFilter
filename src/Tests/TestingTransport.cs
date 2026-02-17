@@ -88,7 +88,7 @@
     }
 
     static Dictionary<string, string> DeserializeMetadata(string messageMetadata) =>
-        JsonConvert.DeserializeObject<Dictionary<string, string>>(File.ReadAllText(messageMetadata))!;
+        System.Text.Json.JsonSerializer.Deserialize<Dictionary<string, string>>(File.ReadAllText(messageMetadata))!;
 
     bool AreMessagesPending() =>
         EndpointDirectories().Any(HasPendingMessages);
