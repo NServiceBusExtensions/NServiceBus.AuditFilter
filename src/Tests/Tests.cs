@@ -1,6 +1,4 @@
-﻿using System.Threading.Tasks;
-
-public class Tests
+﻿public class Tests
 {
     [Test]
     public async Task Skip_with_attribute_and_default_to_include()

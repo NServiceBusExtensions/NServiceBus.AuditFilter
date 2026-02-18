@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics.CodeAnalysis;
-using NServiceBus.Pipeline;
 
 static class ContextHelper
 {

@@ -1,16 +1,10 @@
-﻿using NServiceBus.Pipeline;
-
-class AuditRulesBehavior :
+﻿class AuditRulesBehavior(Filter filter) :
     Behavior<IIncomingLogicalMessageContext>
 {
-    Filter filter;
-
-    public AuditRulesBehavior(Filter filter) =>
-        this.filter = filter;
-
     public override Task Invoke(IIncomingLogicalMessageContext context, Func<Task> next)
     {
         var instance = context.Message.Instance;
+        // ReSharper disable once ConditionIsAlwaysTrueOrFalseAccordingToNullableAPIContract
         if (instance != null)
         {
             var auditFilterContext = context.GetAuditContext();
