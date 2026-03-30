@@ -4,7 +4,7 @@
     <CentralPackageTransitivePinningEnabled>true</CentralPackageTransitivePinningEnabled>
   </PropertyGroup>
   <ItemGroup>
-    <PackageVersion Include="MarkdownSnippets.MsBuild" Version="28.0.1" />
+    <PackageVersion Include="MarkdownSnippets.MsBuild" Version="28.0.2" />
     <PackageVersion Include="NServiceBus" Version="10.1.0" />
     <PackageVersion Include="ProjectDefaults" Version="1.0.172" />
     <PackageVersion Include="Polyfill" Version="9.23.0" />
@@ -15,6 +15,6 @@
     <PackageVersion Include="EmptyFiles" Version="8.17.2" />
     <PackageVersion Include="SimpleInfoName" Version="3.2.0" />
     <PackageVersion Include="Verify" Version="31.13.5" />
-    <PackageVersion Include="TUnit" Version="1.21.30" />
+    <PackageVersion Include="TUnit" Version="1.23.7" />
   </ItemGroup>
 </Project>
